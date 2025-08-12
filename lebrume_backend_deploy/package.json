@@ -1,0 +1,33 @@
+{
+  "name": "lebrume_backend",
+  "version": "1.0.0",
+  "description": "Backend API para a plataforma Lebrume - Sistema de acompanhantes profissionais na Austrália",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-env": "node -e \"console.log('Environment check:', {NODE_ENV: process.env.NODE_ENV, PORT: process.env.PORT, DB_HOST: process.env.DB_HOST ? 'Set' : 'Not set', JWT_SECRET: process.env.JWT_SECRET ? 'Set' : 'Not set'})\""
+  },
+  "keywords": ["api", "backend", "express", "sequelize", "postgresql", "jwt", "companions"],
+  "author": "Lebrume Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.15.6",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.3"
+  }
+}
