@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {
   submitVerificationStep,
-  getVerificationStatus
+  getMyVerificationStatus
 } = require("../controllers/verificationController");
 const { protect, authorize } = require('../middleware/combinedMiddleware');
 
@@ -14,7 +14,7 @@ router.post("/submit/:step", protect, authorize("Companion"), submitVerification
 // @route   GET /api/verification/status
 // @desc    Get verification status for the authenticated companion
 // @access  Private (Companion role)
-router.get("/status", protect, authorize("Companion"), getVerificationStatus);
+router.get("/status", protect, authorize("Companion"), getMyVerificationStatus);
 
 // @route   GET /api/verification/requests
 // @desc    Get all verification requests (for admin)
